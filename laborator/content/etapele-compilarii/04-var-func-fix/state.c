@@ -1,6 +1,6 @@
 const char *init_shopping[3];
 
-void shopping_list(void)
+void init_shopping(void)
 {
 	init_shopping[0] = "cheese";
 	init_shopping[1] = "wine";
