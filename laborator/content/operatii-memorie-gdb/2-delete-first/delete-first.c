@@ -4,7 +4,26 @@
 #include <string.h>
 #include <stdlib.h>
 
-char *delete_first(char *s, char *pattern);
+char *delete_first(char *s, char *pattern){
+	int i = 0, cnt = 0, ans = 0, gasit = 0;
+	char *rez= malloc(strlen(s));
+	for(i = 0; i < strlen(s); i++){
+		int ci = i;
+		cnt = 0;
+		while(gasit == 0 && ci < strlen(s) && s[ci] == pattern[cnt]){
+			cnt++;
+			ci++;
+			if(cnt == strlen(pattern)){
+				gasit = 1;
+				i = ci;
+				break;
+			}
+		}
+		rez[ans] = s[i];
+		ans++;
+	}
+	return rez;
+}
 
 int main(void)
 {
@@ -14,12 +33,7 @@ int main(void)
 	 */
 	char *s = "Ana are mere";
 	char *pattern = "re";
-
-	(void) s;
-	(void) pattern;
-
-	// Decomentați linia după ce ați implementat funcția delete_first.
-	// printf("%s\n", delete_first(s, pattern));
+	printf("%s\n", delete_first(s, pattern));
 
 	return 0;
 }
