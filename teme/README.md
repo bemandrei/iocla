@@ -4,5 +4,5 @@ Sugestie pentru membrii echipei in privinta structurarii acestui folder gasiti i
 
 
 
-https://gemini.com
+[https://gemini.com](https://gemini.google.com/app)
 
